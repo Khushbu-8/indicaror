@@ -16,40 +16,44 @@
 //125 64
 
 
-int cube(int *c){
-	
-	return *c * *c * *c;
+#include<stdio.h>
+
+
+int cube(int *ptr){
+
+   ptr=&cube;
+   return *ptr;
 }
 
-void main(){
-	int row,col;
 
-	printf("Enter Array row :");
-	scanf("%d",&row);
-	printf("Enter Array col :");
+void main()
+
+{
+	int r,col;
+	int a[r][col];
+	printf("enter the row size:");
+	scanf("%d",&r);
+  printf("enter the col size:");
 	scanf("%d",&col);
-		int a[row][col];
-	
-		int i,j;
-		int *c,*p;
-		
-		printf("Enter Array element :\n");
-	for(i=0; i<row; i++){
-		for(j=0; j<col; j++){
-			printf("enter a[%d][%d]: ",i,j);
-		  scanf("%d",& a[i][j]);	
-		}
-    }
-    
-   printf("Cubes of all elements:\n ");
-   
-    for(i=0; i<row; i++){
-    	for(j=0; j<col;j++){
-    	c=&a[i][j];
-     printf("%d ",cube(*c));
-		}
+
+	int i,j;
+	int cube;
+	int *ptr;
+
+	printf("enter the array element:\n");
+
+	for(i=0;i<r;i++){
+		for(j=0;j<col;j++){
+
+		printf("enter a[%d][%d]:",i,j);
+		scanf("%d",&a[i][j]);
+		cube=a[i][j]*a[i][j]*a[i][j];
+		ptr=&cube;
+		printf("cube of all elements:%d\n\n",*ptr);
 	}
-    
-    
-    
+	
+}
+
+
+
 }

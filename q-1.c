@@ -21,9 +21,9 @@ void main(){
 	
     ptr=&str;
 	
-	ptr=strlen(str);
+int	p=strlen(ptr);
 	
- printf("length : %d",*ptr);
+ printf("length : %d",p);
 	
 	
 	
