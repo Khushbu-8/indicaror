@@ -14,6 +14,8 @@ The length of a string is: 11
 void main(){
 	char str[10];
 	int *ptr;
+	int *p;
+	int len;
 
 	
 	printf(" Enter string :");
@@ -21,9 +23,10 @@ void main(){
 	
     ptr=&str;
 	
-int	p=strlen(ptr);
+	len=strlen(ptr);
+	p=&len;
 	
- printf("length : %d",p);
+ printf("length : %d",*p);
 	
 	
 	
